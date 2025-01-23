@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bros and Batter - Cake Order Form</title>
+    <style>
+        h2 {
+            font-size: 30px;
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f5f2;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: none;
+            width: 96%;
+        }
+        button {
+            background-color: #ff7b54;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        #message{
+            width: 95%;
+        }
+        button:hover {
+            background-color: #e06648;
+        }
+        fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.checkbox-label {
+    display: flex; 
+    align-items: center; 
+    font-weight: normal; 
+    font-size: 14px; 
+    cursor: pointer;
+    margin-right: 15px; 
+    margin-top: 5px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 8px;
+    margin-bottom: 5%; 
+    align-items: center;
+}
+
+        legend {
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Bros and Batter - Customize Your Cake</h2>
+    <form id="cakeOrderForm">
+        <!-- Flavor -->
+        <label for="flavor">Flavor</label>
+        <select id="flavor" name="flavor" required>
+            <option value="">Select Flavor</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="vanilla">Vanilla</option>
+            <option value="red velvet">Red Velvet</option>
+            <option value="fruit-based">Fruit-based</option>
+        </select>
+
+        <!-- Texture -->
+        <label for="texture">Texture</label>
+        <select id="texture" name="texture" required>
+            <option value="">Select Texture</option>
+            <option value="moist">Moist</option>
+            <option value="dense">Dense</option>
+            <option value="fluffy">Fluffy</option>
+            <option value="spongy">Spongy</option>
+            <option value="layered">Layered</option>
+        </select>
+
+        <!-- Frosting Type -->
+        <label for="frosting">Frosting Type</label>
+        <select id="frosting" name="frosting" required>
+            <option value="">Select Frosting</option>
+            <option value="buttercream">Buttercream</option>
+            <option value="fondant">Fondant</option>
+            <option value="whipped cream">Whipped Cream</option>
+            <option value="ganache">Ganache</option>
+        </select>
+
+        <!-- Allergies -->
+        <label for="allergies">Allergies</label>
+        <select id="allergies" name="allergies" required>
+            <option value="">Select Allergy Option</option>
+            <option value="none">None</option>
+            <option value="nut-free">Nut-free</option>
+            <option value="dairy-free">Dairy-free</option>
+            <option value="gluten-free">Gluten-free</option>
+        </select>
+
+        <!-- Vegetarian -->
+        <label for="vegetarian">Vegetarian</label>
+        <select id="vegetarian" name="vegetarian" required>
+            <option value="">Select Option</option>
+            <option value="egg">With Egg</option>
+            <option value="eggless">Eggless</option>
+        </select>
+
+        <!-- Size/Shape -->
+        <label for="shape">Size/Shape</label>
+        <select id="shape" name="shape" required>
+            <option value="">Select Size/Shape</option>
+            <option value="standard round">Standard Round</option>
+            <option value="tiered">Tiered</option>
+            <option value="unique">Unique Shape</option>
+        </select>
+
+        <!-- Weight -->
+        <label for="weight">Weight</label>
+        <select id="weight" name="weight" required>
+            <option value="">Select Weight</option>
+            <option value="0.5">1/2 kg</option>
+            <option value="1">1 kg</option>
+            <option value="2">2 kg</option>
+            <option value="3">3 kg</option>
+        </select>
+
+        <!-- Delivery Date -->
+        <label for="deliveryDate">Delivery Date</label>
+        <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+        <!-- Delivery Time -->
+        <label for="deliveryTime">Delivery Time</label>
+        <input type="time" id="deliveryTime" name="deliveryTime" required>
+
+        <!-- Custom Message -->
+        <label for="message">Custom Message (Optional)</label>
+        <input type="text" id="message" name="message" placeholder="E.g., Happy Birthday John!">
+
+        <!-- Theme -->
+        <label for="theme">Theme</label>
+        <select id="theme" name="theme">
+            <option value="">Select Theme</option>
+            <option value="birthday">Birthday</option>
+            <option value="wedding">Wedding</option>
+            <option value="anniversary">Anniversary</option>
+            <option value="baby shower">Baby Shower</option>
+            <option value="custom">Custom Theme</option>
+        </select>
+
+        <!-- Cake Filling -->
+        <label for="filling">Cake Filling</label>
+        <select id="filling" name="filling" required>
+            <option value="">Select Filling</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="vanilla">Vanilla</option>
+            <option value="fruit">Fruit</option>
+            <option value="cream">Cream</option>
+        </select>
+
+       
+        <!-- Toppings -->
+<label for="toppings">Toppings</label>
+<fieldset role="group">
+    <legend>Select Toppings</legend>
+    <label class="checkbox-label" for="sprinkles">
+        <input type="checkbox" id="sprinkles" name="toppings" value="Sprinkles"> Sprinkles
+    </label>
+    <label class="checkbox-label" for="nuts">
+        <input type="checkbox" id="nuts" name="toppings" value="Nuts"> Nuts
+    </label>
+    <label class="checkbox-label" for="fruits">
+        <input type="checkbox" id="fruits" name="toppings" value="Fruits"> Fruits
+    </label>
+    <label class="checkbox-label" for="chocolateChips">
+        <input type="checkbox" id="chocolateChips" name="toppings" value="Chocolate Chips"> Chocolate Chips
+    </label>
+</fieldset>
+
+
+        <!-- Special Instructions -->
+        <label for="instructions">Special Instructions</label>
+        <textarea id="instructions" name="instructions" rows="4" placeholder="Enter any special instructions here..."></textarea>
+
+        <button type="submit">Submit Order</button>
+    </form>
+</body>
+</html>
